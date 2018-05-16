@@ -8,7 +8,7 @@
             <Color x:Key="ButtonColor">#169ee1</Color>
             <Color x:Key="ButtonTextColor">#ffffff</Color>
 
-            <Style TargetType="Label" x:Key="ActivityControlStyle">
+            <Style TargetType="Button" x:Key="ActivityControlStyle">
                 <Setter Property="FontSize" Value="Default" />
                 <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}" />
                 <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}" />

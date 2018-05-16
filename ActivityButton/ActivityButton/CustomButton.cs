@@ -4,13 +4,12 @@ using Xamarin.Forms;
 
 namespace ActivityButton
 {
-    public class CustomButton : Label
+    public class CustomButton : Button
     {
         public CustomButton()
         {
             Style = App.Current.Resources["ActivityControlStyle"] as Style;
-            HorizontalTextAlignment = TextAlignment.Center;
-            VerticalTextAlignment = TextAlignment.Center;
+            HeightRequest = 48;
         }
     }
 }

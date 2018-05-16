@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ActivityButton"
+             x:Class="ActivityButton.ActivityButtonControl"
+             x:Name="This">
+    <ContentView.Content>
+        <AbsoluteLayout>
+            <local:CustomButton
+                Text="{Binding Source={x:Reference This}, Path=Text}"
+                Command="{Binding Source={x:Reference This}, Path=Command}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"/>
+            <ActivityIndicator 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="35"
+                WidthRequest="35"
+                Color="White"
+                IsRunning="{Binding Source={x:Reference This}, Path=IsBusy}"
+                IsVisible="{Binding Source={x:Reference This}, Path=IsBusy}"
+                AbsoluteLayout.LayoutBounds=".125, .5, .125, .5"
+                AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>
